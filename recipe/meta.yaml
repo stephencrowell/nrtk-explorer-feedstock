@@ -1,5 +1,5 @@
 {% set name = "nrtk-explorer" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nrtk_explorer-{{ version }}.tar.gz
-  sha256: 9d9303a6892418561a1fd85a2c0995608647e07d0bbcb7c2a9bebdc21c6bcabf
+  sha256: baf476c59099dea3b6ed17ec8a9e1fef7242b1df6c73db2036222232e00112ed
 
 build:
   entry_points:
@@ -29,8 +29,8 @@ requirements:
   run:
     - accelerate
     - kwcoco
-    - pybsm >=0.6,<=0.9
-    - nrtk
+    - pybsm
+    - nrtk ==0.25.0
     - numpy
     - pillow
     - python >={{ python_min }}
